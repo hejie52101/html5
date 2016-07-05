@@ -47,3 +47,12 @@ function drawText(id) {
     context.fillText("《HTML5+CSS3轻松入门与实战》",40,120);
     context.fillText("视频教程",580,180);
 }
+
+//图像保存
+function drawSave(id) {
+    var canvas = document.getElementById(id);
+    var context = canvas.getContext("2d");
+    context.fillStyle = "green";
+    context.fillRect(0,0,400,300);
+    window.location = canvas.toDataURL("image/png");
+}
