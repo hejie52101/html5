@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>video元素和audio元素</title>
+</head>
+<body>
+<h1>audio元素的使用示例</h1>
+<audio controls="controls" autoplay preload="auto">
+    <source src="horse.ogg" type="audio/ogg"/>
+    您的浏览器太老了,不支持我们的HTML5页面,请更新您的浏览器
+</audio>
+<h1>video元素的使用示例</h1>
+<video  controls="controls" autoplay poster="tu.jpeg">
+    <source src="video.mp4" type="video/mp4">
+    您的浏览器太老了,不支持我们的HTML5页面,请更新您的浏览器
+</video>
+<video id="video" width="400" controls autoplay preload="auto">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.m4v" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+<script>
+    var video = document.getElementById("video");
+    video.addEventListener("error",function () {
+        var error = video.error;
+        switch (error.code) {
+            case 1:
+                alert("取回过程被用户中止!");
+                break;
+            case 2:
+                alert("下载时发生错误!");
+                break;
+            case 3:
+                alert("解码时发生错误!");
+                break;
+            case 4:
+                alert("媒体不可用或者不支持音频/视频!");
+                break;
+        }
+    },false);
+</script>
+</body>
+</html>
