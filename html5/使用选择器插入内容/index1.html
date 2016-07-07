@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用选择器茶如内容</title>
+    <style>
+        h2:before{
+            content: "Title";
+            color: #ffffff;
+            background: #00ff00;
+            padding: 1px 5px;
+            margin-right: 10px;
+        }
+        h2.noContent:before{
+            content: none;
+        }
+    </style>
+</head>
+<body>
+<h1>使用选择器插入内容</h1>
+<h2>使用选择器插入内容</h2>
+<h2>使用选择器插入内容</h2>
+<h2>使用选择器插入内容</h2>
+<h2>使用选择器插入内容</h2>
+<h2>使用选择器插入内容</h2>
+<h2 class="noContent">使用选择器插入内容</h2>
+<h2>使用选择器插入内容</h2>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器E:checked、E:default和indeterminate</title>
+    <style>
+        /*input[type="checkbox"]:checked{
+            outline:2px solid green;
+        }*/
+        input[type="checkbox"]:default{
+            outline:2px solid green;
+        }
+        input[type="radio"]:indeterminate{
+            outline:2px solid red;
+        }
+        input[type="text"]::selection,p::selection{
+            background: #00ff00;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<h1>伪类选择器E:checked、E:default和indeterminate</h1>
+<form>
+    房屋状态:
+    <input type="checkbox"/>水
+    <input type="checkbox"/>电
+    <input type="checkbox"/>气
+    <input type="checkbox"/>光纤
+</form>
+<form>
+    房屋状态:
+    <input type="checkbox" checked/>水
+    <input type="checkbox"/>电
+    <input type="checkbox"/>气
+    <input type="checkbox"/>光纤
+</form>
+<form>
+    性别:
+    <input type="radio"/>男
+    <input type="radio"/>女
+</form>
+<h1>伪类选择器E:selection</h1>
+<p>另外，勾选上图中的Use Soft Wraps就启用了WebStorm的自动换行的功能，即过长的代码行不会超出屏幕，不会出现横向的滚动条。
+
+    值得一提的是，标准的Vim，jk是移到上一行下一行，如果代码自动换行了，被分割成的两行虽然看起来是两行，但其实是一个逻辑行，这时候用jk是上移下移一个逻辑行。这种情况下，如果要从同一逻辑行的“第一行”移动到“第二行”，需要按gj，即先按g再按方向。虽然Vim提供了这个方法，但还是经常按错。
+
+    好消息是，启用了Use Soft Wraps的WebStorm不需要这样，直接按j就可以从同一逻辑行的“第一行”移动到“第二行”。
+</p>
+<input type="text" placeholder="文本"/>
+</body>
+</html>

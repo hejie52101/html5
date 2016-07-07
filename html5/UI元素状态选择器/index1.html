@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器E:hover、E:active和E:focus</title>
+    <style>
+        input[type="text"]:hover{
+            background: #00ff00;
+        }
+        input[type="text"]:focus{
+            background: #ff6600;
+            color: #ffffff;
+        }
+        input[type="text"]:active {
+            background: #0000ff;
+        }
+        input[type="password"]:hover{
+            background: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<h1>选择器E:hover、E:active和E:focus</h1>
+<form>
+    姓名:<input type="text" placeholder="请输入姓名"/>
+    <br />
+    密码:<input type="password" placeholder="请输入密码"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E:enabled伪类选择器与E:disabled伪类选择器</title>
+    <style>
+        input[type="text"]:enabled{
+            background: green;
+            color: #fdfffd;
+        }
+        input[type="text"]:disabled{
+            background: #3d3837;
+        }
+    </style>
+</head>
+<body>
+<h1>E:enabled伪类选择器与E:disabled伪类选择器</h1>
+<form>
+    姓名: <input type="text" placeholder="请输入姓名" disabled/>
+    <br />
+    学校: <input type="text" placeholder="请输入学校"/>
+</form>
+</body>
+</html>

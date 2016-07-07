@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E:required伪类选择器与E:optional伪类选择器</title>
+    <style>
+        input[type="text"]:required{
+            background: #ff0000;
+            color: #ffffff;
+        }
+        input[type="text"]:optional{
+            background: #00ff00;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<h1>E:required伪类选择器与E:optional伪类选择器</h1>
+<form>
+    姓名: <input type="text" placeholder="请输入姓名" required/>
+    <br />
+    学校: <input type="text" placeholder="请输入学校"/>
+</form>
+</body>
+</html>

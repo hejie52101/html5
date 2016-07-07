@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编号嵌套,重置编号</title>
+    <style>
+        h1:before{
+            content: counter(jsq);
+            color: #00ff00;
+            font-size: 24px;
+        }
+        h1{
+            counter-increment: jsq;
+            counter-reset: sub; //编号重置
+        }
+        h2:before{
+            content: counter(jsq)"-"counter(sub);
+            color: #ff6600;
+            font-size: 18px;
+        }
+        h2{
+            counter-increment: sub;
+        }
+    </style>
+</head>
+<body>
+<h1>编号嵌套,重置编号</h1>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h1>编号嵌套,重置编号</h1>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h1>编号嵌套,重置编号</h1>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h1>编号嵌套,重置编号</h1>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h2>测试段落</h2>
+<h1>编号嵌套,重置编号</h1>
+<h2>测试段落</h2>
+</body>
+</html>
