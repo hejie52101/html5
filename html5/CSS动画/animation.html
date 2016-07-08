@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation的使用方法</title>
+    <style>
+        div{
+            margin-top: 400px;
+            width: 20px;
+            height: 20px;
+            background: #ff6600;
+            transform-origin: center;
+        }
+        @keyframes myColor {
+            0%{
+                background-color: #ff6600;
+                transform: rotate(0deg) translate(0);
+            }
+            10%{
+                background-color: green;
+                width: 200px;
+                transform: rotate(72deg) translate(50px);
+            }
+            20%{
+                background-color: red;
+                width: 600px;
+                transform: rotate(144deg) translate(100px);
+            }
+            50%{
+                background-color: yellow;
+                width: 1200px;
+                transform: rotate(360deg) translate(500);
+            }
+            80%{
+                background-color: #000;
+                width: 500px;
+                transform: rotate(576deg) translate(100px);
+            }
+            100%{
+                background-color: #ff6600;
+                width: 20px;
+                transform: rotate(720deg) translate(0);
+            }
+        }
+        /*@-webkit-keyframes myColor {
+            0%{
+                background-color: #ff6600;
+            }
+            10%{
+                background-color: green;
+                width: 100px;
+            }
+            20%{
+                background-color: red;
+                width: 200px;
+            }
+            80%{
+                background-color: #000;
+                width: 800px;
+            }
+            100%{
+                background-color: #ff6600;
+                width: 1000px;
+            }
+        }*/
+        html:hover div{
+            -webkit-animation-name: myColor;
+            -moz-animation-name: myColor;
+            -o-animation-name: myColor;
+            animation-name: myColor;
+            -webkit-animation-duration: 5s;
+            -moz-animation-duration: 5s;
+            -o-animation-duration: 5s;
+            animation-duration: 5s;
+            -webkit-animation-timing-function: ease-in-out;
+            -moz-animation-timing-function: ease-in-out;
+            -o-animation-timing-function: ease-in-out;
+            animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+            -moz-animation-iteration-count: infinite;
+            -o-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+<h1>Animation的使用方法</h1>
+<div></div>
+</body>
+</html>

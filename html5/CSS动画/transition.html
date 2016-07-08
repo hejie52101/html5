@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition属性</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: #00ff00;
+            -webkit-transition: background-color 1s linear,width 1s linear;
+            -moz-transition: all 1s ease-in-out;
+            -ms-transition: all 1s linear;
+            -o-transition: all 1s linear;
+            transition: all 1s cubic-bezier(1,0,0,1.0) 2s;
+        }
+        div:hover{
+            background: #ff6600;
+            width: 900px;
+            height: 400px;;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>

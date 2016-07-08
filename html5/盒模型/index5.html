@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用inline-block类型来显示水平菜单</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2292ff;
+            border-right: solid 1px #1a508c;
+            width: 100px;
+            text-align: center;
+            list-style: none;
+        }
+        li:last-child{
+            border-right: none;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1>使用inline-block类型来显示水平菜单</h1>
+<ul>
+    <li><a href="index2.html">首页</a></li><li>
+    <a href="index2.html">首页</a></li><li>
+    <a href="index2.html">首页</a></li><li>
+    <a href="index2.html">首页</a></li><li>
+    <a id="lastId" href="index2.html">首页</a></li>
+</ul>
+</body>
+</html>
