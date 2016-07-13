@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float属性布局</title>
+    <style>
+        #centerBody{
+            width: 1000px;
+            margin: 0 auto;
+            display: -webkit-box;
+            display: -moz-box;
+        }
+        div#left{
+            /*float: left;*/
+            width: 300px;
+            padding: 10px;
+            background-color: green;
+        }
+        div#right{
+            /*float: right;*/
+            width: 300px;
+            padding: 10px;
+            background-color: #ff39ca;
+        }
+        div#center{
+            /*float: left;*/
+            width: 400px;
+            background-color: #0064ff;
+        }
+        div#left,div#center,div#right{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<h1>Float属性布局</h1>
+<div id="centerBody">
+    <div id="left">
+        <h2>栏目列表</h2>
+        <ul>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+            <li><a href="float.html">栏目名称</a></li>
+        </ul>
+    </div>
+    <div id="center">
+        <p>历史告诉我们 初台风常常温柔也偶尔暴虐
+            数据帝发现，登陆我国的初台多出现在6、7月，最早是在4月，最晚则是在8月，其中6月下旬最多。初台风最偏爱的登陆地点是广东、台湾和海南三省。
+            通常每年7-9月是台风最活跃的季节，尤其是夏末秋初，8、9月份的台风破坏力最强。所以早来的初台风一般不太可怕，其中6月的台风往往比较温柔，强度以较弱的热带风暴或者强热带风暴居多。
+            但是如果初台风推迟，强度往往会达到12级台风或更强的级别。1949年以来最晚的初台风，也恰恰是最强悍的初台风--1975年第3号台风，8月3日登陆台湾花莲，登陆时强度达到了55米/秒，按照现在的标准就是超强台风。</p>
+    </div>
+    <div id="right">
+        <h2>推荐文章</h2>
+        <ul>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+            <li><a href="float.html">推荐文章</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

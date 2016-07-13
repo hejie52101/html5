@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自适应布局</title>
+    <style>
+        body {
+            margin: 20px 0;
+        }
+
+        p {
+            line-height: 600px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+
+        div#container {
+            width: 1000px;
+            margin: auto;
+        }
+
+        div#left {
+            width: 780px;
+            float: left;
+        }
+
+        p#leftX {
+            width: 200px;
+            float: left;
+            background: #0000ff;
+        }
+
+        p#leftY {
+            width: 560px;
+            float: right;
+            background: #00ff00;
+        }
+        p#right{
+            width: 200px;
+            float: right;
+            background: #ff0000;
+        }
+
+        /*最大不超过999像素,大于640像素的时候*/
+        @media screen and (min-width: 640px) and (max-width: 999px) {
+            div#container {
+                width: 640px;
+            }
+
+            div#left {
+                width: 640px;
+                float: left;
+            }
+            p{
+                line-height: 430px;
+            }
+            p#leftX {
+                width: 200px;
+                float: left;
+            }
+
+            p#leftY {
+                width: 420px;
+                float: right;
+            }
+
+            p#right {
+                width: 100%;
+                float: none;
+                clear: both;
+                line-height: 150px;
+            }
+
+        }
+
+        /*最大不超过639像素的时候*/
+        @media screen and (max-width: 639px) {
+            div#container {
+                width: 100%;
+            }
+
+            div#left {
+                width: 100%;
+            }
+            p{
+                line-height: 200px;
+            }
+            p#leftX {
+                width: 100%;
+            }
+
+            p#leftY {
+                width: 100%;
+            }
+
+            p#right {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="left">
+        <p id="leftX">Left</p>
+        <p id="leftY">Center</p>
+    </div>
+    <p id="right">Right</p>
+</div>
+</body>
+</html>
