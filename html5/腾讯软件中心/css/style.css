@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, "宋体", sans-serif;
+    color: #000000;
+}
+#wrap {
+    margin: 0 auto;
+    width: 910px;
+}
+header {
+    width: 100%;
+    background: url("../images/logo.gif") no-repeat;
+    margin-top: 5px;
+}
+header h1 a{
+    display: block;
+    width: 217px;
+    height: 63px;
+    float: left;
+}
+header #title{
+    float: right;
+    margin-top: 10px;
+    height: 63px;
+}
+#title h1{
+    font-size: 100%;
+    font-weight: normal;
+    line-height: 1.5;
+}
+#title p{
+    font-size: 12px;
+    line-height: 1.5;
+    color: grey;
+}
+header nav {
+    clear: both;
+    background: url("../images/navbg.gif") no-repeat;
+    list-style: none;
+    margin-top: 8px;
+    height: 36px;
+}
+header nav ul {
+    width: 94%;
+    margin: 8px auto;
+}
+header nav ul li{
+    display: inline-block;
+
+}
+header nav ul li a{
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 4px;
+    text-align: center;
+    padding: 8px 20px 3px 20px;
+    border: none;
+}
+li.qq_lab {
+    float: right;
+    background: url("../images/arrow_r.gif") no-repeat 0 12px ;
+    margin-right: 20px;
+}
+li a.current {
+    color: #000000;
+    background: #ffffff;
+    border-radius: 5px 5px 0 0;
+}
+#content {
+    width: 100%;
+    background: #ffcc33;
+    overflow: hidden;
+}
+footer {
+    width: 100%;
+    background: #663399;
+    /*clear: both;*/
+}
+.left {
+    width: 800px;
+    /*height: 200px;*/
+    background: #234567;
+    float: left;
+}
+.right {
+    width: 140px;
+    height: 500px;
+    background: #00ff00;
+    float: right;
+}
