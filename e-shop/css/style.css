@@ -72,6 +72,7 @@
 	vertical-align: middle;
 	line-height: 35px;
 	color: #ffffff;
+	display: inline;
 }
 .shopText {
 	background: url(../images/icon/shopCar.jpg) 10px center no-repeat;
