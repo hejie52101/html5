@@ -20,10 +20,9 @@ textarea {
 	resize: none;
 }
 a {
-	-webkit-appearance: none; 
-	-moz-appearance: none;
 	text-decoration: none;
 	color: #656565;
+	cursor: pointer;
 }
 
 /*清浮动*/

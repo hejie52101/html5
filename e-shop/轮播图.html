@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>轮播图 - 电商</title>
+  <style>
+    body,ul{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      list-style: none;
+    }
+    #wrap{
+      width: 800px;
+      height: 450px;
+      margin: 100px auto;
+      overflow: hidden;
+      position: relative;
+    }
+    #wrap img{
+      width: 800px;
+      height: 450px;
+    }
+    #list{
+      display: inline-block;
+      line-height: 20px;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+    }
+    #list li{
+      float: left;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      text-align: center;
+      vertical-align: middle;
+      color: #000;
+      background-color: #737373;
+    }
+    #list .on{
+      background:#E97305;
+      color:#fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <ul id="pic">
+      <li><a href="#"><img src="http://img.mukewang.com/53ad2498000174af13660768.jpg" alt=""></a></li>
+      <li><a href="#"><img src="http://img.mukewang.com/53ad25df0001300613660768.jpg" alt=""></a></li>
+      <li><a href="#"><img src="http://img.mukewang.com/53ad26010001ac1113660768.jpg" alt=""></a></li>
+      <li><a href="#"><img src="http://img.mukewang.com/53ad26170001a86013660768.jpg" alt=""></a></li>
+      <li><a href="#"><img src="http://img.mukewang.com/53ad26320001289e13660768.jpg" alt=""></a></li>
+    </ul>
+    <ul id="list">
+      <li class="on">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+    window.onload=function(){
+      var wrap=document.getElementById('wrap');
+      var pic=document.getElementById('pic').getElementsByTagName("li");
+      var list=document.getElementById('list').getElementsByTagName('li');
+      var index=0;
+      var current=0;
+      var timer=null;
+      /* 定义并调用自动播放函数 */
+      //clearInterval(timer);
+      timer=setInterval(function(){
+        index=current+1;
+        if(index>4)
+          index=0;
+        changePic(index);
+      },2000);
+      /* 定义图片切换函数,参数为要切换到的图片的索引 */
+      function changePic(cindex){
+        list[current].className="";
+        pic[current].style.display="none";
+        list[cindex].className="on";
+        pic[cindex].style.display="block";
+        current=index;
+      }
+      /* 鼠标划过整个容器时停止自动播放 */
+      wrap.onmouseover=function(){
+        clearInterval(timer);
+      };
+      /* 鼠标离开整个容器时继续播放至下一张 */
+      wrap.onmouseout=function(){
+        timer=setInterval(function(){
+        index=current+1;
+        if(index>4)
+          index=0;
+        changePic(index);
+      },2000);
+      };
+
+      /* 遍历所有数字导航实现划过切换至对应的图片 */
+      for(var j=0;j<5;j++){
+        list[j].id=j;
+        list[j].onmouseover=function(){
+          index=this.id;
+          changePic(index);
+        }
+      }
+    }
+  </script> 
+</body>
+</html>
