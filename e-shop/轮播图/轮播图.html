@@ -50,11 +50,11 @@
 <body>
   <div id="wrap">
     <ul id="pic">
-      <li><a href="#"><img src="http://img.mukewang.com/53ad2498000174af13660768.jpg" alt=""></a></li>
-      <li><a href="#"><img src="http://img.mukewang.com/53ad25df0001300613660768.jpg" alt=""></a></li>
-      <li><a href="#"><img src="http://img.mukewang.com/53ad26010001ac1113660768.jpg" alt=""></a></li>
-      <li><a href="#"><img src="http://img.mukewang.com/53ad26170001a86013660768.jpg" alt=""></a></li>
-      <li><a href="#"><img src="http://img.mukewang.com/53ad26320001289e13660768.jpg" alt=""></a></li>
+      <li><a href="#"><img src="pic_1.jpg" alt=""></a></li>
+      <li><a href="#"><img src="pic_2.jpg" alt=""></a></li>
+      <li><a href="#"><img src="pic_3.jpg" alt=""></a></li>
+      <li><a href="#"><img src="pic_4.jpg" alt=""></a></li>
+      <li><a href="#"><img src="pic_5.jpg" alt=""></a></li>
     </ul>
     <ul id="list">
       <li class="on">1</li>
@@ -69,13 +69,13 @@
       var wrap=document.getElementById('wrap');
       var pic=document.getElementById('pic').getElementsByTagName("li");
       var list=document.getElementById('list').getElementsByTagName('li');
-      var index=0;
-      var current=0;
+      index=0;
+      current=0;
       var timer=null;
       /* 定义并调用自动播放函数 */
       //clearInterval(timer);
       timer=setInterval(function(){
-        index=current+1;
+        index++;
         if(index>4)
           index=0;
         changePic(index);
@@ -95,11 +95,12 @@
       /* 鼠标离开整个容器时继续播放至下一张 */
       wrap.onmouseout=function(){
         timer=setInterval(function(){
-        index=current+1;
-        if(index>4)
-          index=0;
-        changePic(index);
-      },2000);
+          index++;
+          if(index>4){
+            index=0;
+          }
+          changePic(index);
+        },2000);
       };
 
       /* 遍历所有数字导航实现划过切换至对应的图片 */
